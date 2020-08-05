@@ -1,0 +1,19 @@
+name: 'Publish Markdown As PDF'
+description: 'Publish a group of Markdown documents as a single PDF document'
+author: 'Samuel Ryan <sam@samryan.co.uk>'
+inputs:
+  sources:
+    description: 'List of glob patterns to Markdown files in order of their inclusion in the PDF'
+    required: true
+outputs:
+  pdf:
+    description: Published PDF Document
+runs:
+  using: 'docker'
+  image: 'baileyjm02/markdown-to-pdf:latest'
+  entrypoint: './publish.sh'
+  args:
+    - ${{ inputs.sources }}
+branding:
+  icon: 'file-text'
+  color: 'green'
