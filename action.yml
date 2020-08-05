@@ -11,7 +11,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://baileyjm02/markdown-to-pdf:latest'
-  entrypoint: './publish.sh'
+  entrypoint: 'publish.sh'
   args:
     - ${{ inputs.sources }}
 branding:
