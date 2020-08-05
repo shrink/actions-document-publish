@@ -10,7 +10,7 @@ outputs:
     description: Published PDF Document
 runs:
   using: 'docker'
-  image: 'baileyjm02/markdown-to-pdf:latest'
+  image: 'docker://baileyjm02/markdown-to-pdf:latest'
   entrypoint: './publish.sh'
   args:
     - ${{ inputs.sources }}
