@@ -1,0 +1,19 @@
+name: Publish Docker Image
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build (+ Publish If Tagged)
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+        registry: docker.pkg.github.com
+        repository: ${{ github.repository }}/actions-document-publish
+        tag_with_ref: true
+        add_git_labels: true
+        push: ${{ startsWith(github.ref, 'refs/tags/') }}
