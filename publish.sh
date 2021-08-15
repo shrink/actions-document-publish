@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SOURCES=$1
-DOCS=".publish-docs"
+DOCS=".publish-docs/"
 DOCUMENT="${DOCS}/document.md"
 
 mkdir -p $DOCS && touch $DOCUMENT
