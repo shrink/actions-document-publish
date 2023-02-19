@@ -1,3 +1,5 @@
+:warning: `actions-document-publish` is no longer maintained, please consider using [`BaileyJM02/markdown-to-pdf`][markdown-to-pdf] directly instead, as this action is a very simple wrapper around `markdown-to-pdf`.
+
 # Document Publish
 
 A GitHub Action for publishing a set of one or more Markdown files as a single
